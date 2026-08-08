@@ -8,16 +8,37 @@ Third in a series of SAP Fiori/ABAP portfolio projects, following [tei-part-trac
 
 ## Screenshots
 
-| | |
+**Analytical List Page**
+
+| ![ALP overview](docs/images/01-alp-overview_genel.png) |
+|---|
+| Chart + table together — engines sorted worst-risk-first, Turkish column headers |
+
+| ![Chart expanded](docs/images/01-alp-overview_garph.png) | ![Table expanded](docs/images/01-alp-overview_veriler.png) |
 |---|---|
-| ![ALP overview](docs/images/01-alp-overview.png) | ![Critical parts](docs/images/02-object-page-critical-parts.png) |
-| Analytical List Page — chart + table, sorted worst-risk-first | Object Page — critical (LLP) parts, color-coded risk |
-| ![Borescope findings](docs/images/03-object-page-borescope.png) | ![Life forecast](docs/images/04-object-page-forecast.png) |
-| Borescope inspection history | Life forecast per part — the "predictive" payoff |
-| ![EGT trend](docs/images/05-object-page-egt-trend.png) | ![Filter bar](docs/images/06-filter-bar.png) |
-| EGT margin decline trend | Filter bar in use |
+| Chart view, maximized — grouped by base, engine model, status | Table view, maximized — full row detail, including "10+ years" and "No data" labels in the forecast column |
+
+**Object Page**
+
+| ![Critical parts](docs/images/02-object-page-critical-parts.png) | ![Borescope findings](docs/images/03-object-page-borescope.png) |
+|---|---|
+| Critical (LLP) parts, color-coded risk (red/yellow) | Borescope inspection findings |
+
+| ![Life forecast](docs/images/04-object-page-forecast.png) | ![EGT trend](docs/images/05-object-page-egt-trend.png) |
+|---|---|
+| Life forecast per part — negative days mean the part is already past its limit; the clearest "predictive" payoff | EGT margin decline trend forecast |
+
+**Filtering**
+
+| ![Filter dialog](docs/images/06-filter-bar_before.png) | ![Filter applied](docs/images/06-filter-bar_after.png) |
+|---|---|
+| Table-level View Settings dialog — filtering by Engine Model = BOM0002 | Filter applied to the table |
+
+**Backend proof**
+
 | ![Backend data](docs/images/07-se11-tables.png) | ![Unit tests](docs/images/08-abap-unit-tests.png) |
-| Real seeded data in the Z-tables | ABAP Unit test run — 10/10 green |
+|---|---|
+| Real seeded data in `ZTEI_ELD_ENGINE` — Turkish base names, dates, and serials, straight from the database | ABAP Unit run for the forecast class — 6/6 green (the EGT-trend class has its own 4/4 run) |
 
 ## Why this project
 

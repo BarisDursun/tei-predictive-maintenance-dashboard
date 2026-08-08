@@ -8,16 +8,37 @@ Uçak motoru filosu için kestirimci bakım (predictive maintenance) gösterge p
 
 ## Ekran Görüntüleri
 
-| | |
+**Analytical List Page**
+
+| ![ALP genel görünüm](docs/images/01-alp-overview_genel.png) |
+|---|
+| Grafik + tablo bir arada — motorlar en riskliden başlayarak sıralı, Türkçe kolon başlıkları |
+
+| ![Grafik büyütülmüş](docs/images/01-alp-overview_garph.png) | ![Tablo büyütülmüş](docs/images/01-alp-overview_veriler.png) |
 |---|---|
-| ![ALP genel görünüm](docs/images/01-alp-overview.png) | ![Kritik parçalar](docs/images/02-object-page-critical-parts.png) |
-| Analytical List Page — grafik + tablo bir arada, en riskli en üstte | Object Page — kritik (LLP) parçalar, renkli risk göstergesi |
-| ![Muayene bulguları](docs/images/03-object-page-borescope.png) | ![Ömür tahmini](docs/images/04-object-page-forecast.png) |
-| Borescope muayene geçmişi | Parça bazında ömür tahmini — projenin "kestirimci" tarafının karşılığı |
-| ![EGT trend](docs/images/05-object-page-egt-trend.png) | ![Filtre barı](docs/images/06-filter-bar.png) |
-| EGT marjini düşüş trendi | Filtre barı kullanımda |
+| Grafik görünümü, büyütülmüş — üs, motor modeli ve duruma göre gruplanmış | Tablo görünümü, büyütülmüş — tüm satır detayları; tahmin kolonunda "10+ yıl" ve "Veri Yok" etiketleri görünür |
+
+**Object Page**
+
+| ![Kritik parçalar](docs/images/02-object-page-critical-parts.png) | ![Muayene bulguları](docs/images/03-object-page-borescope.png) |
+|---|---|
+| Kritik (LLP) parçalar, renkli risk göstergesi (kırmızı/sarı) | Borescope muayene bulguları |
+
+| ![Ömür tahmini](docs/images/04-object-page-forecast.png) | ![EGT trend](docs/images/05-object-page-egt-trend.png) |
+|---|---|
+| Parça bazında ömür tahmini — negatif gün değerleri parçanın limitini çoktan aştığını gösterir; projenin "kestirimci" tarafının en net karşılığı | EGT marjini düşüş trend tahmini |
+
+**Filtreleme**
+
+| ![Filtre diyaloğu](docs/images/06-filter-bar_before.png) | ![Filtre uygulanmış](docs/images/06-filter-bar_after.png) |
+|---|---|
+| Tablo seviyesinde View Settings diyaloğu — Motor Modeli = BOM0002 filtresi giriliyor | Filtre tabloya uygulanmış hâli |
+
+**Backend kanıtı**
+
 | ![Backend verisi](docs/images/07-se11-tables.png) | ![Unit testler](docs/images/08-abap-unit-tests.png) |
-| Z-tablolarındaki gerçek üretilmiş veri | ABAP Unit test çalıştırması — 10/10 yeşil |
+|---|---|
+| `ZTEI_ELD_ENGINE` tablosundaki gerçek üretilmiş veri — Türkçe üs adları, tarihler ve seri numaraları, doğrudan veritabanından | Tahmin sınıfı için ABAP Unit çalıştırması — 6/6 yeşil (EGT-trend sınıfının kendi 4/4 çalıştırması ayrıca mevcut) |
 
 ## Neden bu proje
 
