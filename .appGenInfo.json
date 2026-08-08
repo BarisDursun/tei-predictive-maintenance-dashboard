@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Tue Aug 04 2026 16:40:04 GMT+0300 (Türkiye Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://vhcalnplci:8000/sap/opu/odata/sap/ZTEI_ELD_PM_SRV_SRV",
+    "appName": "zteieldpm",
+    "appTitle": " TEI ELD Predictive Maintenance Dashboard",
+    "appDescription": "TEI motor filosu icin kestirimci bakim dashboard'u",
+    "appNamespace": "com.tei",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.150.1",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.28.0",
+    "template": "Analytical List Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "EngineSet"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

@@ -1,0 +1,58 @@
+FINDING_ID;ENGINE_SN;INSPECTION_DATE;SEVERITY;SUBSYSTEM;FINDING_TEXT
+0000000001;TF6000-001;20250822;4;Kompresör;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000002;TF6000-002;20260101;2;Kompresör;Hafif erozyon, izlemede
+0000000003;TF6000-002;20260327;2;Türbin;Hafif erozyon, izlemede
+0000000004;TF6000-003;20251125;4;Kompresör;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000005;TF6000-003;20260624;2;Fan;Hafif erozyon, izlemede
+0000000006;TF6000-003;20260714;2;Fan;Hafif erozyon, izlemede
+0000000007;TS1400-001;20241209;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000008;TS1400-001;20250312;2;Gaz Üretici Türbini;Hafif erozyon, izlemede
+0000000009;TS1400-001;20250519;4;Gaz Üretici Türbini;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000010;TS1400-001;20250801;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000011;TS1400-001;20251226;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000012;TS1400-001;20260518;2;Güç Türbini;Hafif erozyon, izlemede
+0000000013;TS1400-002;20240916;3;Gaz Üretici Türbini;Eşiğe yaklaşan aşınma, yakın takip
+0000000014;TS1400-002;20241024;2;Gaz Üretici Türbini;Hafif erozyon, izlemede
+0000000015;TS1400-002;20241227;2;Güç Türbini;Hafif erozyon, izlemede
+0000000016;TS1400-002;20250221;4;Kompresör;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000017;TS1400-002;20250413;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000018;TS1400-002;20250606;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000019;TS1400-002;20251022;2;Gaz Üretici Türbini;Hafif erozyon, izlemede
+0000000020;TS1400-002;20260206;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000021;TS1400-002;20260414;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000022;TS1400-002;20260511;4;Güç Türbini;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000023;TS1400-002;20260523;3;Kompresör;Eşiğe yaklaşan aşınma, yakın takip
+0000000024;TS1400-002;20260611;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000025;TS1400-003;20250429;3;Gaz Üretici Türbini;Eşiğe yaklaşan aşınma, yakın takip
+0000000026;TS1400-003;20250628;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000027;TS1400-003;20260322;2;Kompresör;Hafif erozyon, izlemede
+0000000028;TS1400-004;20250506;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000029;TS1400-004;20251104;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000030;TS1400-004;20260608;2;Güç Türbini;Hafif erozyon, izlemede
+0000000031;TF10000-001;20260630;1;Fan;Kozmetik iz, limit dahilinde
+0000000032;TF10000-002;20260321;2;Fan;Hafif erozyon, izlemede
+0000000033;TF10000-002;20260619;2;Kompresör;Hafif erozyon, izlemede
+0000000034;TF10000-002;20260701;1;Fan;Kozmetik iz, limit dahilinde
+0000000035;TJ90-001;20251006;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000036;TJ90-002;20241227;1;Türbin;Kozmetik iz, limit dahilinde
+0000000037;TJ90-002;20250810;2;Türbin;Hafif erozyon, izlemede
+0000000038;TJ90-002;20250814;2;Türbin;Hafif erozyon, izlemede
+0000000039;TJ90-002;20250923;3;Türbin;Eşiğe yaklaşan aşınma, yakın takip
+0000000040;TJ90-002;20260603;2;Kompresör;Hafif erozyon, izlemede
+0000000041;TJ90-003;20250929;1;Türbin;Kozmetik iz, limit dahilinde
+0000000042;TP38-001;20251212;1;Türbin;Kozmetik iz, limit dahilinde
+0000000043;TP38-002;20250221;4;Kompresör;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000044;TP38-002;20250529;2;Kompresör;Hafif erozyon, izlemede
+0000000045;TP38-002;20251001;2;Kompresör;Hafif erozyon, izlemede
+0000000046;TP38-002;20260608;2;Kompresör;Hafif erozyon, izlemede
+0000000047;TS1400-DUR1;20250310;2;Kompresör;Hafif erozyon, izlemede
+0000000048;TS1400-DUR1;20250320;2;Güç Türbini;Hafif erozyon, izlemede
+0000000049;TS1400-DUR1;20250414;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000050;TS1400-DUR1;20250731;5;Güç Türbini;Kritik hasar, motor söküm gerekli
+0000000051;TS1400-DUR1;20250821;4;Güç Türbini;Limit aşıldı, sonraki uçuş öncesi tamir gerekli
+0000000052;TS1400-DUR1;20250822;1;Güç Türbini;Kozmetik iz, limit dahilinde
+0000000053;TS1400-DUR1;20251102;1;Güç Türbini;Kozmetik iz, limit dahilinde
+0000000054;TS1400-DUR1;20251204;1;Kompresör;Kozmetik iz, limit dahilinde
+0000000055;TS1400-DUR1;20251226;2;Kompresör;Hafif erozyon, izlemede
+0000000056;TS1400-DUR1;20260120;1;Gaz Üretici Türbini;Kozmetik iz, limit dahilinde
+0000000057;TS1400-DUR1;20260406;3;Gaz Üretici Türbini;Eşiğe yaklaşan aşınma, yakın takip

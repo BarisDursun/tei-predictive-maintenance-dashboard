@@ -1,0 +1,458 @@
+[
+  {
+    "FINDING_ID": "0000000001",
+    "ENGINE_SN": "TF6000-001",
+    "INSPECTION_DATE": "20250822",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000002",
+    "ENGINE_SN": "TF6000-002",
+    "INSPECTION_DATE": "20260101",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000003",
+    "ENGINE_SN": "TF6000-002",
+    "INSPECTION_DATE": "20260327",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000004",
+    "ENGINE_SN": "TF6000-003",
+    "INSPECTION_DATE": "20251125",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000005",
+    "ENGINE_SN": "TF6000-003",
+    "INSPECTION_DATE": "20260624",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Fan",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000006",
+    "ENGINE_SN": "TF6000-003",
+    "INSPECTION_DATE": "20260714",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Fan",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000007",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20241209",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000008",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20250312",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000009",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20250519",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000010",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20250801",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000011",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20251226",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000012",
+    "ENGINE_SN": "TS1400-001",
+    "INSPECTION_DATE": "20260518",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000013",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20240916",
+    "SEVERITY": "3",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Eşiğe yaklaşan aşınma, yakın takip"
+  },
+  {
+    "FINDING_ID": "0000000014",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20241024",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000015",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20241227",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000016",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20250221",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000017",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20250413",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000018",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20250606",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000019",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20251022",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000020",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20260206",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000021",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20260414",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000022",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20260511",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000023",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20260523",
+    "SEVERITY": "3",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Eşiğe yaklaşan aşınma, yakın takip"
+  },
+  {
+    "FINDING_ID": "0000000024",
+    "ENGINE_SN": "TS1400-002",
+    "INSPECTION_DATE": "20260611",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000025",
+    "ENGINE_SN": "TS1400-003",
+    "INSPECTION_DATE": "20250429",
+    "SEVERITY": "3",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Eşiğe yaklaşan aşınma, yakın takip"
+  },
+  {
+    "FINDING_ID": "0000000026",
+    "ENGINE_SN": "TS1400-003",
+    "INSPECTION_DATE": "20250628",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000027",
+    "ENGINE_SN": "TS1400-003",
+    "INSPECTION_DATE": "20260322",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000028",
+    "ENGINE_SN": "TS1400-004",
+    "INSPECTION_DATE": "20250506",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000029",
+    "ENGINE_SN": "TS1400-004",
+    "INSPECTION_DATE": "20251104",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000030",
+    "ENGINE_SN": "TS1400-004",
+    "INSPECTION_DATE": "20260608",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000031",
+    "ENGINE_SN": "TF10000-001",
+    "INSPECTION_DATE": "20260630",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Fan",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000032",
+    "ENGINE_SN": "TF10000-002",
+    "INSPECTION_DATE": "20260321",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Fan",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000033",
+    "ENGINE_SN": "TF10000-002",
+    "INSPECTION_DATE": "20260619",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000034",
+    "ENGINE_SN": "TF10000-002",
+    "INSPECTION_DATE": "20260701",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Fan",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000035",
+    "ENGINE_SN": "TJ90-001",
+    "INSPECTION_DATE": "20251006",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000036",
+    "ENGINE_SN": "TJ90-002",
+    "INSPECTION_DATE": "20241227",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000037",
+    "ENGINE_SN": "TJ90-002",
+    "INSPECTION_DATE": "20250810",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000038",
+    "ENGINE_SN": "TJ90-002",
+    "INSPECTION_DATE": "20250814",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000039",
+    "ENGINE_SN": "TJ90-002",
+    "INSPECTION_DATE": "20250923",
+    "SEVERITY": "3",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Eşiğe yaklaşan aşınma, yakın takip"
+  },
+  {
+    "FINDING_ID": "0000000040",
+    "ENGINE_SN": "TJ90-002",
+    "INSPECTION_DATE": "20260603",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000041",
+    "ENGINE_SN": "TJ90-003",
+    "INSPECTION_DATE": "20250929",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000042",
+    "ENGINE_SN": "TP38-001",
+    "INSPECTION_DATE": "20251212",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Türbin",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000043",
+    "ENGINE_SN": "TP38-002",
+    "INSPECTION_DATE": "20250221",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000044",
+    "ENGINE_SN": "TP38-002",
+    "INSPECTION_DATE": "20250529",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000045",
+    "ENGINE_SN": "TP38-002",
+    "INSPECTION_DATE": "20251001",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000046",
+    "ENGINE_SN": "TP38-002",
+    "INSPECTION_DATE": "20260608",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000047",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250310",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000048",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250320",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000049",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250414",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000050",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250731",
+    "SEVERITY": "5",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Kritik hasar, motor söküm gerekli"
+  },
+  {
+    "FINDING_ID": "0000000051",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250821",
+    "SEVERITY": "4",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Limit aşıldı, sonraki uçuş öncesi tamir gerekli"
+  },
+  {
+    "FINDING_ID": "0000000052",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20250822",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000053",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20251102",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Güç Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000054",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20251204",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000055",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20251226",
+    "SEVERITY": "2",
+    "SUBSYSTEM": "Kompresör",
+    "FINDING_TEXT": "Hafif erozyon, izlemede"
+  },
+  {
+    "FINDING_ID": "0000000056",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20260120",
+    "SEVERITY": "1",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Kozmetik iz, limit dahilinde"
+  },
+  {
+    "FINDING_ID": "0000000057",
+    "ENGINE_SN": "TS1400-DUR1",
+    "INSPECTION_DATE": "20260406",
+    "SEVERITY": "3",
+    "SUBSYSTEM": "Gaz Üretici Türbini",
+    "FINDING_TEXT": "Eşiğe yaklaşan aşınma, yakın takip"
+  }
+]

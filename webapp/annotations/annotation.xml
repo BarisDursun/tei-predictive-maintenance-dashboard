@@ -1,0 +1,431 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZTEI_ELD_PM_SRV_SRV/$metadata">
+        <edmx:Include Namespace="ZTEI_ELD_PM_SRV_SRV"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+
+            <!-- Alan etiketleri: backend metadata'sindaki ham teknik isimleri
+                 (ORN. "Üst codu", "TOTALFLIGHTHOURS") duzgun Turkce etiketlerle
+                 degistiriyor. Grafik eksenleri, filtre bari ve tablo basliklari
+                 hepsi bu etiketleri kullaniyor. -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Enginesn">
+                <Annotation Term="Common.Label" String="Motor Seri No"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Bomid">
+                <Annotation Term="Common.Label" String="Motor Modeli"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Enginefamilytype">
+                <Annotation Term="Common.Label" String="Motor Tipi"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Basecode">
+                <Annotation Term="Common.Label" String="Üs"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Basename">
+                <Annotation Term="Common.Label" String="Üs Adı"/>
+            </Annotations>
+            <!-- Ham kod (A/M/D) yerine ekranda Statustext ("Aktif"/"Bakımda"/
+                 "Devre Dışı") gosteriliyor. Entity-seviyesindeki TextArrangement
+                 varsayilani (asagida) bunu otomatik TextOnly yapiyor. -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Status">
+                <Annotation Term="Common.Label" String="Durum"/>
+                <Annotation Term="Common.Text" Path="Statustext"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Totalflighthours">
+                <Annotation Term="Common.Label" String="Toplam Uçuş Saati"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Totalcycles">
+                <Annotation Term="Common.Label" String="Toplam Çevrim"/>
+            </Annotations>
+            <!-- EGT Marjini: sayisal alan olarak KALIYOR (siralama/filtre/grafik
+                 bunun uzerinden calisiyor), ama ekranda sayinin YERINE
+                 Currentegtmargintxt metni gosteriliyor.
+                 Sebep: PD170 pistonlu bir motor, EGT marjini kavrami onun icin
+                 gecersiz - ama SAP'de DEC alan NULL olamadigi icin 0 olarak
+                 duruyor ve "0 marj = en kritik" gibi yanlis okunuyordu.
+                 DPC_EXT metni turbinlerde "71.8 C", pistonlularda "N/A" uretiyor.
+                 TextOnly = sadece metni goster, ham sayiyi hic gosterme. -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Currentegtmargin">
+                <Annotation Term="Common.Label" String="EGT Marjini"/>
+                <Annotation Term="Common.Text" Path="Currentegtmargintxt"/>
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Currentegtmargintxt">
+                <Annotation Term="Common.Label" String="EGT Marjini"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Worstpartriskrank">
+                <Annotation Term="Common.Label" String="Risk Durumu"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Redpartcount">
+                <Annotation Term="Common.Label" String="Kırmızı Parça"/>
+            </Annotations>
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine/Yellowpartcount">
+                <Annotation Term="Common.Label" String="Sarı Parça"/>
+            </Annotations>
+
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Engine">
+
+                <!-- Metin duzenlemesi varsayilani: Common.Text'i olan alanlarda
+                     SADECE metni goster, ham degeri parantez icinde ekleme.
+                     Property seviyesinde de ayni annotasyon var ama OData V2
+                     SmartTable kolon uretiminde onu her zaman dikkate almiyor;
+                     entity tipi seviyesindeki bu varsayilan olmadan "N/A (0.0)"
+                     seklinde ciktI veriyordu (TextFirst davranisi). Su an
+                     Common.Text'i olan tek alan Currentegtmargin oldugu icin
+                     bu varsayilanin baska alanlara yan etkisi yok. -->
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+
+                <!-- Filtre barindaki alanlar: Motor Modeli, Us, Durum -->
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Bomid</PropertyPath>
+                        <PropertyPath>Basecode</PropertyPath>
+                        <PropertyPath>Status</PropertyPath>
+                    </Collection>
+                </Annotation>
+
+                <!-- Tablo kolonlari -->
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Enginesn"/>
+                            <PropertyValue Property="Label" String="Motor Seri No"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Bomid"/>
+                            <PropertyValue Property="Label" String="Model"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Basecode"/>
+                            <PropertyValue Property="Label" String="Üs"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Basename"/>
+                            <PropertyValue Property="Label" String="Üs Adı"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Status"/>
+                            <PropertyValue Property="Label" String="Durum"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Totalflighthours"/>
+                            <PropertyValue Property="Label" String="Uçuş Saati"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Totalcycles"/>
+                            <PropertyValue Property="Label" String="Toplam Çevrim"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Currentegtmargin"/>
+                            <PropertyValue Property="Label" String="EGT Marjini"/>
+                        </Record>
+                        <!-- Risk gostergesi: gosterilen DEGER anlamli bir sayi (kac kritik
+                             parca limitin uzerinde), RENK ise Worstpartriskrank'ten geliyor
+                             (1=Kirmizi/Negative, 2=Sari/Critical, 3=Yesil/Positive - SAP standardi).
+                             Ham rank sayisini (1/3) kolon olarak gostermek izleyiciye bir sey
+                             ifade etmedigi icin sadece renk kaynagi olarak kullaniliyor. -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Redpartcount"/>
+                            <PropertyValue Property="Label" String="Kritik Parça"/>
+                            <PropertyValue Property="Criticality" Path="Worstpartriskrank"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Yellowpartcount"/>
+                            <PropertyValue Property="Label" String="İzlemedeki Parça"/>
+                        </Record>
+                        <!-- "Sonraki Bakim Tahmini" - Kritik Parca kolonu SADECE "su an
+                             kac parca sorunlu" bilgisini veriyor (durum), bu kolon ise
+                             "ne zaman sorun cikar" (ongoru) sinyalini ekliyor - projenin
+                             "predictive maintenance" iddiasinin ana listedeki karsiligi. -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Nearestforecasttxt"/>
+                            <PropertyValue Property="Label" String="Sonraki Bakım Tahmini"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- ALP ana grafigi: Us bazinda toplam ucus saati (cubuk grafik).
+                     Grafik ustundeki "View By" menusunden boyut degistirilebiliyor. -->
+                <Annotation Term="UI.Chart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Bar"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>Basecode</PropertyPath>
+                                <PropertyPath>Bomid</PropertyPath>
+                                <PropertyPath>Status</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>Totalflighthours</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Totalflighthours"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Ikinci grafik: motor modeli bazinda kritik parca sayisi (halka grafik).
+                     Kullanici ALP'nin grafik tipi menusunden bu varyanta gecebiliyor.
+                     Grafikler toplamayi ISTEMCI tarafinda yaptigi icin sunucu-tarafi
+                     aggregation (sap:aggregation-role / $apply) gerektirmiyor. -->
+                <Annotation Term="UI.Chart" Qualifier="RiskByModel">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut"/>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>Bomid</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>Totalcycles</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="Totalcycles"/>
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Grafik + tabloyu birlikte gosteren sunum varyanti.
+                     SortOrder BURADA calisiyor (dogrulandi: mock'ta - yani ABAP
+                     ORDER BY'dan bagimsiz olarak - en riskli motor en uste geliyor). -->
+                <Annotation Term="UI.PresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart</AnnotationPath>
+                                <AnnotationPath>@UI.LineItem</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="Worstpartriskrank"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Varsayilan filtre denemesi: sadece aktif motorlar (Status=A).
+                     DURUM: Bu annotasyonun SelectionVariant kismi bu Fiori Elements
+                     surumunde ALP tarafindan UYGULANMIYOR - ekranda "No filters active"
+                     kaliyor ve Status=D olan motor da listeleniyor. Denenen ve
+                     SONUC VERMEYEN yollar: (1) manifest'te
+                     defaultTemplateAnnotationPath ayari, (2) UI.PresentationVariant'a
+                     Qualifier verip ortada tek niteleyicisiz aday olarak SPV'yi
+                     birakmak, (3) smartVariantManagement: true.
+                     ALP Component kaynagi incelendiginde SPV'nin OKUNDUGU goruluyor
+                     (LineItem/Chart niteleyicisini oradan cikariyor) ama SelectionVariant
+                     varsayilan degerleri ayri bir mekanizmadan geciyor.
+                     Annotasyon BILEREK birakildi: sunucu tarafi filtreleme calisiyor
+                     (kullanici filtre barindan sectiginde DPC_EXT dogru filtreliyor),
+                     sadece ACILISTA otomatik uygulanmiyor. Cozum icin
+                     onInitSmartFilterBar/addFilters extension'i gerekir - saf
+                     annotasyon-tabanli mimariyi bozmamak icin tercih edilmedi. -->
+                <Annotation Term="UI.SelectionPresentationVariant">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="PresentationVariant" AnnotationPath="@UI.PresentationVariant"/>
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
+                                    <Collection>
+                                        <Record Type="UI.SelectOptionType">
+                                            <PropertyValue Property="PropertyName" PropertyPath="Status"/>
+                                            <PropertyValue Property="Ranges">
+                                                <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                                        <PropertyValue Property="Low" String="A"/>
+                                                    </Record>
+                                                </Collection>
+                                            </PropertyValue>
+                                        </Record>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Object Page bolumleri: motora tiklayinca kritik parcalar,
+                     muayene gecmisi, omur tahmini ve EGT trend tahmini -
+                     ToPartRisk/ToBorescope/ToForecast/ToEgtTrend navigation'lari uzerinden.
+                     Son iki facet projenin "predictive maintenance" iddiasini ilk kez
+                     ekrana getiriyor - ZCL_TEI_ELD_FORECAST/ZCL_TEI_ELD_EGT_TREND
+                     siniflari onceden yazilip test edilmisti ama hicbir annotation
+                     onlara baglanmamisti, bu yuzden hic gorunmuyorlardi. -->
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Kritik Parçalar"/>
+                            <PropertyValue Property="Target" AnnotationPath="ToPartRisk/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Muayene Bulguları"/>
+                            <PropertyValue Property="Target" AnnotationPath="ToBorescope/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Ömür Tahmini (Parça Bazında)"/>
+                            <PropertyValue Property="Target" AnnotationPath="ToForecast/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="EGT Trend Tahmini"/>
+                            <PropertyValue Property="Target" AnnotationPath="ToEgtTrend/@UI.LineItem"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+            </Annotations>
+
+            <!-- PartRisk: Object Page'deki "Kritik Parcalar" tablosunun kolonlari -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.PartRisk">
+
+                <!-- Engine'de oldugu gibi: Common.Text'i olan alanlarda SADECE metni
+                     goster, ham degeri parantez icinde ekleme (property-seviyesi tek
+                     basina yetmiyor, bu ders EGT Marjini'nde ogrenildi). -->
+                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Nodeid"/>
+                            <PropertyValue Property="Label" String="Parça No"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Cyclelimit"/>
+                            <PropertyValue Property="Label" String="Çevrim Limiti"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Cyclesaccumulated"/>
+                            <PropertyValue Property="Label" String="Kullanılan Çevrim"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Usagepct"/>
+                            <PropertyValue Property="Label" String="Kullanım Yüzdesi"/>
+                        </Record>
+                        <!-- Ham kod (G/Y/R) yerine Riskcategorytext ("Yeşil"/"Sarı"/"Kırmızı")
+                             gosteriliyor, renk göstergesi Riskrank'tan geliyor (Engine
+                             listesindeki Kritik Parca/Worstpartriskrank ile ayni desen). -->
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Riskcategory"/>
+                            <PropertyValue Property="Label" String="Risk"/>
+                            <PropertyValue Property="Criticality" Path="Riskrank"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Lastinspectiondate"/>
+                            <PropertyValue Property="Label" String="Son Muayene"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.PartRisk/Riskcategory">
+                <Annotation Term="Common.Text" Path="Riskcategorytext"/>
+            </Annotations>
+
+            <!-- Borescope: Object Page'deki "Muayene Bulgulari" tablosunun kolonlari -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Borescope">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InspectionDate"/>
+                            <PropertyValue Property="Label" String="Muayene Tarihi"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Subsystem"/>
+                            <PropertyValue Property="Label" String="Alt Sistem"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Severity"/>
+                            <PropertyValue Property="Label" String="Şiddet"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="FindingText"/>
+                            <PropertyValue Property="Label" String="Bulgu"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <!-- Forecast: Object Page'deki "Omur Tahmini" tablosunun kolonlari.
+                 BILINCLI KISA TUTULDU: NodeId/CycleLimit/UsagePct/RiskCategory
+                 zaten "Kritik Parcalar" (PartRisk) facet'inde gosteriliyor,
+                 burada TEKRAR etmiyoruz - sadece PartRisk'in VERMEDIGI yeni
+                 bilgiyi (tahmini kalan gun, tahmini tarih) ekliyoruz. Boylece
+                 iki facet birbirini tekrar etmek yerine tamamliyor:
+                 PartRisk = "su an durum ne", Forecast = "ne zaman sorun cikar". -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.Forecast">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NodeId"/>
+                            <PropertyValue Property="Label" String="Parça No"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EstimatedDaysLeft"/>
+                            <PropertyValue Property="Label" String="Tahmini Kalan Gün"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EstimatedDate"/>
+                            <PropertyValue Property="Label" String="Tahmini Tarih"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <!-- EgtTrend: Object Page'deki "EGT Trend Tahmini" tablosunun kolonlari.
+                 Sadece turbin (family=T) motorlarda satir doner - ZCL_TEI_ELD_EGT_TREND
+                 zaten family='T' filtreli, pistonlu PD170'lerde bu facet BOS gorunur
+                 (hata degil, tasarim geregi - PartRisk/Borescope'ta da ayni davranis). -->
+            <Annotations Target="ZTEI_ELD_PM_SRV_SRV.EgtTrend">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CurrentEgtMargin"/>
+                            <PropertyValue Property="Label" String="Mevcut EGT Marjini"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeclinePerDay"/>
+                            <PropertyValue Property="Label" String="Günlük Düşüş"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EstimatedDaysLeft"/>
+                            <PropertyValue Property="Label" String="Eşiğe Kalan Gün"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EstimatedDate"/>
+                            <PropertyValue Property="Label" String="Tahmini Eşik Tarihi"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

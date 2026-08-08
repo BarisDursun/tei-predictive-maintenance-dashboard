@@ -1,0 +1,122 @@
+[
+  {
+    "EngineSn": "TF6000-001",
+    "CurrentEgtMargin": "73.2",
+    "DeclinePerDay": "0.0176",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 3308,
+    "EstimatedDate": "/Date(2071612800000)/"
+  },
+  {
+    "EngineSn": "TF6000-002",
+    "CurrentEgtMargin": "78.2",
+    "DeclinePerDay": "0.0281",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2251,
+    "EstimatedDate": "/Date(1980288000000)/"
+  },
+  {
+    "EngineSn": "TF6000-003",
+    "CurrentEgtMargin": "71.8",
+    "DeclinePerDay": "0.0222",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2564,
+    "EstimatedDate": "/Date(2007331200000)/"
+  },
+  {
+    "EngineSn": "TS1400-001",
+    "CurrentEgtMargin": "49.0",
+    "DeclinePerDay": "0.0234",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1456,
+    "EstimatedDate": "/Date(1911600000000)/"
+  },
+  {
+    "EngineSn": "TS1400-002",
+    "CurrentEgtMargin": "59.0",
+    "DeclinePerDay": "0.0214",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2053,
+    "EstimatedDate": "/Date(1963180800000)/"
+  },
+  {
+    "EngineSn": "TS1400-003",
+    "CurrentEgtMargin": "57.8",
+    "DeclinePerDay": "0.0271",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1581,
+    "EstimatedDate": "/Date(1922400000000)/"
+  },
+  {
+    "EngineSn": "TS1400-004",
+    "CurrentEgtMargin": "60.4",
+    "DeclinePerDay": "0.0247",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1835,
+    "EstimatedDate": "/Date(1944345600000)/"
+  },
+  {
+    "EngineSn": "TF10000-001",
+    "CurrentEgtMargin": "78.7",
+    "DeclinePerDay": "0.0276",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2305,
+    "EstimatedDate": "/Date(1984953600000)/"
+  },
+  {
+    "EngineSn": "TF10000-002",
+    "CurrentEgtMargin": "72.5",
+    "DeclinePerDay": "0.0274",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2100,
+    "EstimatedDate": "/Date(1967241600000)/"
+  },
+  {
+    "EngineSn": "TJ90-001",
+    "CurrentEgtMargin": "31.0",
+    "DeclinePerDay": "0.0199",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 803,
+    "EstimatedDate": "/Date(1855180800000)/"
+  },
+  {
+    "EngineSn": "TJ90-002",
+    "CurrentEgtMargin": "39.6",
+    "DeclinePerDay": "0.0090",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 2736,
+    "EstimatedDate": "/Date(2022192000000)/"
+  },
+  {
+    "EngineSn": "TJ90-003",
+    "CurrentEgtMargin": "42.4",
+    "DeclinePerDay": "0.0142",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1934,
+    "EstimatedDate": "/Date(1952899200000)/"
+  },
+  {
+    "EngineSn": "TP38-001",
+    "CurrentEgtMargin": "52.2",
+    "DeclinePerDay": "0.0231",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1608,
+    "EstimatedDate": "/Date(1924732800000)/"
+  },
+  {
+    "EngineSn": "TP38-002",
+    "CurrentEgtMargin": "50.0",
+    "DeclinePerDay": "0.0087",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 4022,
+    "EstimatedDate": "/Date(2133302400000)/"
+  },
+  {
+    "EngineSn": "TS1400-DUR1",
+    "CurrentEgtMargin": "60.3",
+    "DeclinePerDay": "0.0276",
+    "ThresholdUsed": "15.0",
+    "EstimatedDaysLeft": 1642,
+    "EstimatedDate": "/Date(1927670400000)/"
+  }
+]
